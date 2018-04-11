@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="yashaswi.cartappandroid.Confirmation"
+    tools:showIn="@layout/activity_confirmation">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listLinear"
+        android:id="@+id/uname"
+        android:textStyle="bold"
+        android:text="HHHHHHHHHHHHHHHHHHHHHH"
+        android:textSize="15dp"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listLinear"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listLinear"
+            android:id="@+id/tempView2"
+            android:text="Current Cart Items"
+            />
+
+   <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:id="@+id/ConfirmCart"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ConfirmCart"
+        android:id="@+id/cartConfirmTotal"
+        android:layout_gravity="center"
+        android:textAlignment="center" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cartConfirmTotal"
+        android:onClick="sendSMS"
+        android:id="@+id/cnfrmbtn"
+        android:text="Confirm"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cnfrmbtn"
+            android:onClick="callFirstActivity"
+            android:text="Cancel"/>
+    </LinearLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listLinear"
+            android:id="@+id/tempView"
+            android:layout_marginTop="20dp"
+            android:text="Previous Shopping History"
+            />
+        <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="198dp"
+        android:id="@+id/historyList"
+        android:layout_below="@+id/tempView"
+        />
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

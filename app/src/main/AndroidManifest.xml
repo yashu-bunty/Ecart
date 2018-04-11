@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="yashaswi.cartappandroid">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges= "orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ShowCart"
+            android:label="@string/title_activity_show_cart"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges= "orientation|keyboardHidden|screenSize"/>
+        <activity
+            android:name=".CheckOut"
+            android:label="@string/title_activity_check_out"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges= "orientation|keyboardHidden|screenSize"/>
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges= "orientation|keyboardHidden|screenSize"/>
+        <activity
+            android:name=".Confirmation"
+            android:label="@string/title_activity_confirmation"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges= "orientation|keyboardHidden|screenSize"/>
+
+    </application>
+
+</manifest>
